@@ -1,0 +1,12 @@
+- [CHASE_009 v2 revision list](chase-009-v2-revisions.md) — all of the user's notes on v1 of the Chase reel; read before building v2
+- [Flourish Edit SOP](flourish-edit-sop.md) — mandatory rules for every Flourish / Dime Motion reel (script, famous-face hook, no stock, one grade, meaning shots, naming, Frame.io)
+- [Cut silence, repeats & fillers](edit-rule-cut-silence-and-fillers.md) — first step on EVERY video: remove pauses, stutters, repeats, "you know"/"right"
+- [Reels safe zone](edit-rule-reels-safe-zone.md) — all captions/graphics inside x70–1025 y250–1110, and x70–887 y1110–1500
+- [Typography board reference](typography-board-reference.md) — user's Pinterest Typography board: the only source for caption/title type style
+- [Fonts: no big bold text](edit-rule-fonts-no-big-bold.md) — no huge/heavy display type; CHASE_009 = Helvetica Regular/Bold + Playfair Display Regular only
+- [Two-colour palette](edit-rule-two-color-palette.md) — always exactly 2 complementary colour families for everything; CHASE_009 = blue + golden
+- [Talking-head framing](edit-rule-talking-head-framing.md) — raw always full-frame & centred, never shrunk/cropped/offset; zoom only in, anchored on face
+- [Real assets over shapes](edit-rule-real-assets-over-shapes.md) — Pinterest person PNGs & real paper instead of flat circles/drawn documents
+- [Camera movement](edit-rule-camera-movement.md) — constant purposeful pushes/tilts/pans that focus on what is happening; still = fail
+- [Zoom reference: Chase_TH_008](zoom-reference-chase-th-008.md) — measured zoom curves/amounts/snap punch-ins to copy on every reel
+- [Flourish reference reel (Arnold)](flourish-reference-reel-arnold.md) — Krish's 0:45 reel: pacing, B-roll and caption style to copy
