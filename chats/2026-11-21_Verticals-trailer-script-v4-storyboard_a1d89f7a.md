@@ -2975,7 +2975,7 @@ https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/39/a2/13/39a21300-4b07-4
 <details><summary>result</summary>
 
 ```
-{"helpersAvailable":[{"helpers":[{"ageDays":1,"agent":"claude","call":"helpers[\"fsVideo\"](browser, page)","candidate":false,"description":"Saved helper for youtube.com","inputs":{},"name":"fsVideo","opensPage":false},{"ageDays":1,"agent":"claude","call":"helpers[\"grabFrames\"](browser, page)","candidate":false,"description":"Saved helper for youtube.com","inputs":{},"name":"grabFrames","opensPage":false},{"ageDays":0,"agent":"claude","call":"helpers[\"grabJpg\"](browser, page)","candidate":false,"description":"Saved helper for youtube.com","inputs":{},"name":"grabJpg","opensPage":false}],"host":"youtube.com"}],"logs":[],"ok":true,"session":"61cc76f4-43f4-465a-82ba-3897d756e6ea","value":{"bg":[],"ifr":["https://api.vector.co/pixel/phoenix/sync-container?duid=5e57a923b71a--01m7zh9j9n7yc1a457c6gcbm85&ds=did-006l&euns=1&s=&version=v3.17.0&cd=.shepherdinsurance.com&pv=7cb21ce8-c0aa-42b1-bb60-ddf536e1cd49"],"imgs":[{"a":"","s":"https://www.shepherdinsurance.com/wf-assets/69610f8e01715e065592a3a5_Rectangle-191.webp","w":1360}],"links":[],"vids":["https://player.vimeo.com/progressive_redirect/playback/1157667900/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=efcd0cfd87ba30604eca14cd90509a652be33c502208817eae236655d43fb062"]}}
+{"helpersAvailable":[{"helpers":[{"ageDays":1,"agent":"claude","call":"helpers[\"fsVideo\"](browser, page)","candidate":false,"description":"Saved helper for youtube.com","inputs":{},"name":"fsVideo","opensPage":false},{"ageDays":1,"agent":"claude","call":"helpers[\"grabFrames\"](browser, page)","candidate":false,"description":"Saved helper for youtube.com","inputs":{},"name":"grabFrames","opensPage":false},{"ageDays":0,"agent":"claude","call":"helpers[\"grabJpg\"](browser, page)","candidate":false,"description":"Saved helper for youtube.com","inputs":{},"name":"grabJpg","opensPage":false}],"host":"youtube.com"}],"logs":[],"ok":true,"session":"61cc76f4-43f4-465a-82ba-3897d756e6ea","value":{"bg":[],"ifr":["https://api.vector.co/pixel/phoenix/sync-container?duid=5e57a923b71a--01m7zh9j9n7yc1a457c6gcbm85&ds=did-006l&euns=1&s=&version=v3.17.0&cd=.shepherdinsurance.com&pv=7cb21ce8-c0aa-42b1-bb60-ddf536e1cd49"],"imgs":[{"a":"","s":"https://www.shepherdinsurance.com/wf-assets/69610f8e01715e065592a3a5_Rectangle-191.webp","w":1360}],"links":[],"vids":["https://player.vimeo.com/progressive_redirect/playback/1157667900/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=[redacted]"]}}
 ```
 </details>
 
@@ -2988,7 +2988,7 @@ Shepherd's own website has a 1080p brand video (hosted on Vimeo). That's their o
 **🔧 Bash**
 ```
 {
- "command": "cd ~/jl-trailer/broll && mkdir -p shep && U='https://player.vimeo.com/progressive_redirect/playback/1157667900/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=efcd0cfd87ba30604eca14cd90509a652be33c502208817eae236655d43fb062'; FF=/Users/gourav/ks-ron-build/reel1/ff; $FF -hide_banner -i \"$U\" 2>&1 | grep -E \"Duration|Stream\" ; $FF -v error -i \"$U\" -vf \"fps=1,scale=320:-2\" -q:v 4 shep/%04d.jpg; ls shep | wc -l",
+ "command": "cd ~/jl-trailer/broll && mkdir -p shep && U='https://player.vimeo.com/progressive_redirect/playback/1157667900/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=[redacted]'; FF=/Users/gourav/ks-ron-build/reel1/ff; $FF -hide_banner -i \"$U\" 2>&1 | grep -E \"Duration|Stream\" ; $FF -v error -i \"$U\" -vf \"fps=1,scale=320:-2\" -q:v 4 shep/%04d.jpg; ls shep | wc -l",
  "description": "Probe Shepherd video and sample 1 fps",
  "timeout": 300000
 }
@@ -3056,7 +3056,7 @@ Shepherd's own video includes cinematic interview shots of Justin in their offic
 **🔧 Bash**
 ```
 {
- "command": "cd ~/jl-trailer/broll/frames && U='https://player.vimeo.com/progressive_redirect/playback/1157667900/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=efcd0cfd87ba30604eca14cd90509a652be33c502208817eae236655d43fb062'; FF=/Users/gourav/ks-ron-build/reel1/ff; for t in 1 6 13.5 17 22.3 39 45 98 170.5; do $FF -v error -y -ss $t -i \"$U\" -frames:v 1 -q:v 2 jl_shep_$t.jpg & done; wait; ls jl_shep_*; rm -rf ../shep; df -h ~|tail -1",
+ "command": "cd ~/jl-trailer/broll/frames && U='https://player.vimeo.com/progressive_redirect/playback/1157667900/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=[redacted]'; FF=/Users/gourav/ks-ron-build/reel1/ff; for t in 1 6 13.5 17 22.3 39 45 98 170.5; do $FF -v error -y -ss $t -i \"$U\" -frames:v 1 -q:v 2 jl_shep_$t.jpg & done; wait; ls jl_shep_*; rm -rf ../shep; df -h ~|tail -1",
  "description": "Grab full-res frames from Shepherd's video",
  "timeout": 200000
 }
@@ -5732,7 +5732,7 @@ def grid_w(n, area_w=271.0, area_h=132.0, gap=2.2):
 
 ```
   11 https://dimemotion.wistia.com/s/2zna71kiy7ku86m
-   7 https://player.vimeo.com/progressive_redirect/playback/1157667900/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=efcd0cfd87ba30604eca14cd90509a652be33c502208817eae236655d43fb062
+   7 https://player.vimeo.com/progressive_redirect/playback/1157667900/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&signature=[redacted]
    6 https://next.frame.io/share/23232e45-3aaf-4979-829b-e983e2ce3a3f/
    6 https://greenlightre.com/wp-content/uploads/2021/08/logo.svg
    5 https://dimemotion.wistia.com/s/2zna71kiy7ku86m.
