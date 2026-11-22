@@ -11,7 +11,7 @@
 - [Zoom reference: Chase_TH_008](zoom-reference-chase-th-008.md) — measured zoom curves/amounts/snap punch-ins to copy on every reel
 - [Smooth motion](edit-rule-smooth-motion.md) — eased curves, no 1-frame jumps, real motion blur (sub-frames), spike check before delivery
 - [Flourish reference reel (Arnold)](flourish-reference-reel-arnold.md) — Krish's 0:45 reel: pacing, B-roll and caption style to copy
-- [Opening-move graph](ease-graph-opening-move.md) — first camera move of a scene on cubic-bezier(0,1,1,1), starting ON the first frame (fast part visible)
+- [Opening-move graph](ease-graph-opening-move.md) — SUPERSEDED 2026-11-22: only EU/G1/G2 now (see feedback-jl-v4-review)
 - [User ease graph](ease-graph-user-smooth.md) — cubic-bezier(0.68,0,0.03,1) S-curve: use for every smooth move
 - [No text on people](edit-rule-no-text-on-person.md) — never text on a face; documentry style allows text on bodies (2026-11-17); other styles keep text off people
 - [Zoom length & text timing](edit-rule-zoom-duration-and-text-timing.md) — zooms/pans 2-3 s on the graph; text early and readable; vignette on photos
@@ -45,3 +45,5 @@
 - [Never close/stop unasked](feedback-keep-ref-tabs-open.md) — keep ref tabs, terminal sessions, running jobs open; "new terminal tab" = real Terminal.app claude session via osascript
 - [Footage at normal speed](feedback-footage-normal-speed.md) — no slow-mo/optical-flow stretching of footage; only camera moves get smoothed
 - [JL trailer scene review rules](feedback-jl-trailer-scene-review.md) — NO zoom-through transitions ever; copy ref transitions; big captions near subject; centred subject; no laggy captures (get originals); ref-speed 3D camera
+- [GitHub context repo](github-context-repo.md) — 'our github repo' = gouravzzzzz/context (public); push chats+memory via neo web upload, redact first
+- [JL v4+v5 review rules](feedback-jl-v4-review.md) — stable talking heads, ONLY EU/G1/G2, no music, no dropouts/abrupt mutes, voice through Adobe Enhance (speech 100, bg 0), caption behind speaker via matte, no black gaps, grade dull webcams, zoom-cut every repeat

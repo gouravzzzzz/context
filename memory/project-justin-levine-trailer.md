@@ -101,3 +101,32 @@ Started 2026-11-21. Script: ~/Downloads/"Verticals Trailer Script v4, Justin Lev
   - **Audio:** Krish said remove ALL hits/risers. The booms, impacts, risers, stinger and bass drop are commented out in mix2.py; only the counter ticks, page flips and keyboard remain.
   - **Carousel glitch:** cards behind the ring were drawn in the same slot (fixed), and cv2 POS_FRAMES seeks were inaccurate. Always decode B-roll sequentially, never seek.
 - **Sent 2026-11-22 6:28 am:** v4 trailer (177 MB) went to Krish on WhatsApp as a document with no text. Delivered, and the WhatsApp tab was closed.
+- **Shared 2026-11-22 6:38 am:** sent Krish the GitHub link to this session's chat log on WhatsApp: github.com/gouravzzzzz/context/blob/main/chats/2026-11-21_Verticals-trailer-script-v4-storyboard_38bd0f11.md. Delivered.
+- **v5 delivered 2026-11-22 ~16:45:** ~/Downloads/Verticals_Justin_Levine_Trailer_v5.mp4 (2175 f, 90.6 s, -14 LUFS), assembled by assemble_v5.py with audio/mix3.wav. v4's segments are backed up in v2segs/v4_used/.
+  - **Music:** removed entirely (mix3.py). Only the keyboard, counter-tick and page-flip SFX remain.
+  - **Voice:** audio_v5/voice_v5.py rebuilds it from ~/verticals-justin-build/work/*48.wav with the same timing as before. Adobe Enhance is no longer used.
+    - Joints sit at the quietest nearby point and are equal-power crossfaded.
+    - A coarticulated joint (c_in or c_out) is pinned to ±5 ms, because moving it either leaks the removed filler or chops the word.
+    - Synthetic spectrum-matched room tone fills the gated digital-zero holes; real "quiet" stretches carried faint words. There are 0 dropouts now (v4 had 21).
+  - **Picture:** shots.Spk and Split are static (median face anchor, no chain; the face-follow caused the wiggle). The founded cut-out sits at a fixed x, and fix_no has no push.
+  - **Easing:** engine.py remaps every ease onto EU/G1/G2: J3.bez maps by character, and EIO, EASE_IO and EASE_OUT are remapped too. The cubic-outs in scene3d_v2 and scene_adsk became G1, the seg11b pin zoom became G1, and seg15 lost its linear drift.
+- **v6 delivered 2026-11-22 ~19:20:** ~/Downloads/Verticals_Justin_Levine_Trailer_v6.mp4 (2175 f, -14 LUFS), built by assemble_v6.py with audio/mix4.wav and audio_v5/voice_v6.wav. Krish's v5 notes, all in render_v2.py:
+  - **Headline exit:** "co-founder and CEO of / Shepherd." leaves UP on G2 (0.6 s, about 950 px). It is timed on the NEW timeline (newtime.M), because a removed pause sits right before the cut. Code: headline_exit.
+  - **Founded cutout:** shots.Founded comes up from below the frame on G1 (1000 px, 1.2 s).
+  - **1:25 "Breaking news":** Luke is FULL SCREEN, cut on each "Breaking" (NEW f2037 and f2060), snap zoom 1.22 → 1.30 then 1.55 → 1.65 on G1. The neon box sits left of his head. luke_grade() is used for his footage (split panel too). The lit hand-over is gone. Code: fix_split.
+  - **End:** no black shot. Luke holds to the title, the title doesn't fade up from black, and the end fade-out is kept. Code: fix_end.
+  - **Voice v6:**
+    - Nic's source has a 265 ms digital-zero dropout at 3069.93. Fix: 60 ms fade-out, 6 ms fade-in (25 ms turned "we" into "you"), room fill.
+    - A continuous room bed follows each speaker's real floor (10th percentile, minimum -58 dBFS), applied AFTER the newtime recut, with a 0.3 s glide.
+    - Loud joints get dB-linear fades.
+    - Result: 0 abrupt mutes.
+- **v7 delivered 2026-11-22 ~19:45:** ~/Downloads/Verticals_Justin_Levine_Trailer_v7.mp4, built by assemble_v7.py.
+  - The BREAKING NEWS box sits BEHIND Luke, using matte/luke_*.png from matte_luke.py (run with the chase-009-build venv, which has rembg). Segment v2segs/16_split_end_v6b.
+  - Voice: voice_v6 went through Adobe Enhance v2 (speech 100, music 0, background 0), saved as audio/adobe6/*-esv2-100p-bg-m-music-m.wav, mixed by mix5.py into audio/mix5.wav. 0 ms offset; pauses at -78 dB.
+- **AE SFX pass, 2026-11-22:** ~/Downloads/Verticals_Justin_Levine_Trailer_v7.aep has comp "Verticals_Justin_Levine_Trailer_v7". The v7 mp4 is the locked bottom layer, with 84 SFX layers above it.
+  - Sounds come from ~/SFX: OCULAR whooshes/hits/braams, DragerStudio UI taps/shines, camera shutters, MotionPulse trailer hits and an Archetype riser.
+  - Placement: whoosh peak sits ON the cut or motion peak; hits and taps sit on their onset; the riser peaks at the title cut.
+  - Label colours by kind; mix + SFX peaks at -1 dBFS.
+  - Rebuild: `python sfx_ae/build_cues.py` writes cues.json and preview_mix.wav, then regenerate add_sfx.jsx and run it via osascript DoScriptFile. Re-running replaces the "SFX " layers.
+  - Gourav renders from AE himself.
+- **v8 test (every key 1.6x longer + more overlap) was rejected 2026-11-23 ("its not good") and fully deleted** (video, ks16 segments, KEYSTRETCH code). All scripts are back to v7. Krish's next changes go on v7. Don't bring back the global key-stretch idea.
