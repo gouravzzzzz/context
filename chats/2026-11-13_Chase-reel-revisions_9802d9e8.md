@@ -4278,3 +4278,85 @@ v3 is re-rendering with the smoothness fixes, which takes about 10–15 minutes.
  "file_path": "/private/tmp/claude-501/-Users-gourav/9802d9e8-f883-4a2c-9d65-9a2816a4ab5d/scratchpad/v2/chk/phone_strip2.jpg"
 }
 ```
+
+### ↩️ Tool · 2026-11-14 00:43
+
+<details><summary>result</summary>
+
+```
+done 798
+     798
+-rw-r--r--  1 gourav  staff  76859507 14 Nov 06:13 /Users/gourav/Downloads/CHASE_009_Reel_v3.mp4
+spikes: [(4.25, np.float64(6.4), np.float64(2.4))]
+Shell cwd was reset to /Users/gourav
+```
+</details>
+
+### ↩️ Tool · 2026-11-14 00:43
+
+<details><summary>result</summary>
+
+```
+[image]
+```
+</details>
+
+### 🤖 Claude · 2026-11-14 00:43
+
+**🔧 Bash**
+```
+{
+ "command": "open ~/Downloads/CHASE_009_Reel_v3.mp4",
+ "description": "Open v3 in the default player"
+}
+```
+
+### ↩️ Tool · 2026-11-14 00:43
+
+<details><summary>result</summary>
+
+```
+(Bash completed with no output)
+```
+</details>
+
+### 🤖 Claude · 2026-11-14 00:43
+
+**🔧 Bash**
+```
+{
+ "command": "cd /Users/gourav/.claude/projects/-Users-gourav/memory && cat > edit-rule-smooth-motion.md <<'EOF'\n---\nname: edit-rule-smooth-motion\ndescription: \"Every animation, camera move and transition must be smooth — no choppy/stepped motion; use eased curves, slower travel and real motion blur\"\nmetadata:\n  type: feedback\n---\n\nEvery animation, graph, transition and camera move must look smooth. Nothing choppy, stepped or jumpy.\n\n**Why:** The user found the 3D phone entrance in CHASE_009 v2 choppy on 2026-11-14. It travelled about 1,600 px in 0.9 s at 24 fps with no motion blur, so each frame jumped about 100 px. The user said: \"I want every animation, every graph, and every transition to be smooth.\"\n\n**How to apply:**\n- Use eased curves only. The camera uses cubic-bezier(0.60, 0, 0.15, 1), from [[zoom-reference-chase-th-008]]. Never use linear starts or stops.\n- Keep travel distances short and entrances about 1.2–1.5 s long.\n- Never use 1-frame jumps. Snap punch-ins become a fast ease over about 5 frames, then ease back.\n- Don't stop and start the camera between closely spaced targets; glide through them in one move.\n- Render real motion blur with a 180° shutter by averaging sub-frames: 4 normally, about 12 during fast moves. With too few sub-frames, fast objects show ghost copies.\n- Before delivering, run a frame-difference spike check: flag any frame whose change is more than about 2.2× the median of its neighbours.\n\nRelated: [[edit-rule-camera
+…[347 chars truncated]
+```
+
+### ↩️ Tool · 2026-11-14 00:43
+
+<details><summary>result</summary>
+
+```
+1
+[This command modified 1 file you've previously read: MEMORY.md. Call Read before editing.]
+```
+</details>
+
+### 🤖 Claude · 2026-11-14 00:43
+
+v3 is done and open in your player: `~/Downloads/CHASE_009_Reel_v3.mp4`. It's 33.3 s, 1080×1920, 77 MB, and v1 and v2 are untouched.
+
+**Smoothness, including the choppy phone:**
+- The phone was choppy because it jumped about 100 px per frame with no motion blur. It now rises over 1.45 s on a gentle curve.
+- Every frame now has real motion blur, made by blending 4 in-between moments, or 12 during fast moves.
+- An automated check for sudden frame-to-frame jumps found 7 in the first v3 render and now finds 1. That one is the $1B+ landing, where the number changes and punches in on the same frame on purpose. The phone strip shows a continuous blur now, with no ghost copies.
+- Punch-ins ease in over about 5 frames instead of jumping. The camera glides down the term sheet in one move, and highlight boxes wipe away instead of fading to a dark box.
+
+**Your other notes from this round:**
+- **People:** flat silhouette icons from your pins, with the businessman for **you** (blue) and **them** (gold), and the round-head icon for the "club" crowd.
+- **Camera:** it moves on nearly every beat. It pushes on the counter, rides the gold timeline, drops down the term-sheet rows, punches into CLOSED, and leans into the phone as messages arrive.
+- **Zoom style from Chase_TH_008:** alternating in and out with the measured curve, plus quick punch-ins on "$1B+", "refuse", "negotiate" and "partners".
+- **Head tracking:** much tighter (about 1.3–1.5×), following his head closely with light smoothing. A light sharpen offsets the enlargement, but the tightest moments are still a little softer.
+- **Money:** "$10M → $1B+" and the 12–14 scoreboard are big, bold and gold.
+- **3D paper:** the term sheet rises from below lying back, swings up to vertical with a springy settle, bends, flutters and catches light. The same sheet lies on the table for the signature and CLOSED.
+
+**Safe zone:** all captions and focus elements are inside it. A few things pass outside only during camera pushes: the decorative room lines and timeline go off-frame, and the top table icon slides under the top bar during the CLOSED punch-in.
+
+A new **dime-talking-head** skill just appeared in this session: "Apple-style talking-head edits with iPhone, paper and chart scenes". It wasn't available when I built v3. Want me to check v3 against it before this goes to Krish?
