@@ -1,0 +1,13 @@
+# Dime S3 (dime_trailer.mp4 f85-f165, 30 fps), checked frame by frame 2026-11-22. Sheets: sheet_A-D.jpg
+- f85-f99: the previous graphic drifts left slowly, then whips LEFT (ease-in), heavily blurred by f97-f101. It's off by f103 and reveals the ground.
+- f99/100-f110: the speaker cut-out rises from the bottom, head first, motion-blurred. The head is about 80% of the way up by f110 and settles by f125 (cubic ease-out, 1.2 → 1.0 scale).
+- f101-f110: the photo card SLIDES IN from the left edge (a strip at first, its right edge reaching about x 900 by f110, ease-out). Then it sits with a few px of drift. The card is a STILL photo with square corners and no shadow.
+- f109 "For", f116 "40", f122 "Seats": each fades in over 2-3 f with a small rise. f128-f130: "Restaurant" pops (bold, 2-3 f); its tail overlaps the speaker's outline, in front.
+- f131-f141: the small headline word types on at the FAR RIGHT edge ("t" f131, "th" f135, "tha" f138), before and as the truck begins.
+- f140-f150: the TRUCK. Speed per frame from f133: 2,3,4,5,6,8,10,12,15,19,26,37,49,80,90,46,28,18,11,8,4,1.
+  - Card and caption move about 540 px left.
+  - The speaker moves about 500 px, scales 1.4× and goes soft (lens blur 10-15 px).
+  - The headline moves only about 280 px.
+  - The hero word types during the truck ("Ins" f143 → "Insane" f155).
+- f150-f159: a static hold with the speaker as a blurred foreground at the left and the headline at right. Hard cut at f160.
+- Nothing else moves. Nothing whips out mid-scene, and there's no zoom.
