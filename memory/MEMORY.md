@@ -7,6 +7,41 @@
 - [Two-colour palette](edit-rule-two-color-palette.md) — always exactly 2 complementary colour families for everything; CHASE_009 = blue + golden
 - [Talking-head framing](edit-rule-talking-head-framing.md) — raw always full-frame & centred, never shrunk/cropped/offset; zoom only in, anchored on face
 - [Real assets over shapes](edit-rule-real-assets-over-shapes.md) — Pinterest person PNGs & real paper instead of flat circles/drawn documents
-- [Camera movement](edit-rule-camera-movement.md) — constant purposeful pushes/tilts/pans that focus on what is happening; still = fail
+- [Camera movement](edit-rule-camera-movement.md) — calm, centred; zooms only at entries/transitions (v3 constant moves were rejected)
 - [Zoom reference: Chase_TH_008](zoom-reference-chase-th-008.md) — measured zoom curves/amounts/snap punch-ins to copy on every reel
+- [Smooth motion](edit-rule-smooth-motion.md) — eased curves, no 1-frame jumps, real motion blur (sub-frames), spike check before delivery
 - [Flourish reference reel (Arnold)](flourish-reference-reel-arnold.md) — Krish's 0:45 reel: pacing, B-roll and caption style to copy
+- [Opening-move graph](ease-graph-opening-move.md) — first camera move of a scene on cubic-bezier(0,1,1,1), starting ON the first frame (fast part visible)
+- [User ease graph](ease-graph-user-smooth.md) — cubic-bezier(0.68,0,0.03,1) S-curve: use for every smooth move
+- [No text on people](edit-rule-no-text-on-person.md) — never text on a face; documentry style allows text on bodies (2026-11-17); other styles keep text off people
+- [Zoom length & text timing](edit-rule-zoom-duration-and-text-timing.md) — zooms/pans 2-3 s on the graph; text early and readable; vignette on photos
+- [Finish overlays](edit-rule-finish-overlays.md) — motion blur on everything, vignette, radial fast blur, Texturelabs paper textures (luminance only) on graphic/photo scenes
+- [Ron Foxcroft KSS shorts](project-ron-foxcroft-kss-shorts.md) — Gillian B-roll style reel build (~/ks-ron-build), raw offset 4:51, v1 status, style to become a skill
+- [YouTube download route](youtube-download-route.md) — y2meta-uk.com via neo; yt-dlp + cobalt fail here; exact-seek frame picks
+- [Music: instrumental only, -35 to -38](edit-rule-music-bed-level.md) — never a song with lyrics (screen with Whisper); bed -37 LUFS under -14 voice
+- [Close WhatsApp tab](whatsapp-close-tab.md) — close web.whatsapp.com in neo as soon as the send is confirmed
+- [Ray Lucia style reel](project-ray-lucia-style-reel.md) — new Episode 5 / Quotient style on Ron short 1 (~/ks-ron-build/reel_rl); no flourish skill; v1 delivered
+- [Documentry style skill](skill-documentry-style.md) — 'open documentry style skill' = ~/.claude/skills/documentry-style-skill; read its Status and continue
+- [Key words big & bold + text shadow/glow](edit-rule-key-words-big-bold.md) — names, places, numbers, expressions always hero/bold/highlighted; every caption shadow + glow
+- [Photo slide direction](edit-rule-photo-motion-direction.md) — photos land centred, never stall, pushes follow slide direction, photos match what's said
+- [Open the reel after rendering](feedback-open-reel-after-render.md) — always run open on the delivered mp4 right away, never wait to be asked
+- [Documentry v4+v5 review rules](feedback-documentry-v4-review.md) — outpaint horizontals, slow moves, pure transitions, L/R/C alignment, leaks into TH, no text near photo lettering, eased slides, remove every 3rd-person voice, finish overlays
+- [Keyframe overlapping technique](technique-keyframe-overlapping.md) — next move starts ~50% into the previous eased move (null parenting); our cam_at deltas = nulls
+- [Ask before rendering](feedback-ask-before-render.md) — only render when the user says so in that message; otherwise ask first
+- [Jennifer Musselman style (Ron short 02)](project-jennifer-musselman-style.md) — Ron short 02; v2 = Composio 'Agents at Work' look (refs_jen2/STUDY2.md, reel2/work2), stills stage
+- [Copy the reference exactly](feedback-copy-reference-exactly.md) — no invented tilt/transparency/size/offset; text always lands straight (3D = motion only); compare every element to the ref before stills
+- [End tail](edit-rule-end-tail.md) — last word must finish; 0.6 s held tail, music fades; never end on the last syllable
+- [Animations must mean what's said](feedback-animations-must-mean.md) — refs = look only; illustrate the line with real non-stock assets; no hook title unless asked; captions fade in & stay
+- [Text alignment by side (GLOBAL)](edit-rule-text-alignment-by-side.md) — left-placed text left-aligned, right-placed right-aligned, middle centred; every reel, every skill
+- [Transition ease pair (GLOBAL)](edit-rule-transition-ease-pair.md) — outgoing half graph 2 cubic-bezier(1,0,1,1), incoming half graph 1 cubic-bezier(0,0,0,1); fastest at the cut
+- [Zoom direction continuity (GLOBAL)](edit-rule-zoom-direction-continuity.md) — end on zoom-in → next starts zooming in; speaker zoom-out entry → previous ends on zoom-out; check every cut
+- [Ref sets motion, reel style sets look](feedback-reel-style-overrides-ref-look.md) — in a styled reel (e.g. Jennifer) animation refs give only the motion; never use the ref's colours/fonts
+- [Kristina Shea trailer](project-kristina-shea-trailer.md) — Jennifer-style trailer reel: zip offsets, cam sync, take 4 timings, storyboard build + scene decisions
+- [Ratio conversion](edit-rule-ratio-conversion.md) — vertical<->horizontal: only the ratio changes; graphics centred; text L/C/R aligned
+- [Trailer v1 review rules](feedback-trailer-v1-rules.md) — title safe 90 %, hidden tear reveal + shake, key words ≥1 s, eye-locked fast match cuts, zoom out of screen, Trailer 1 type
+- [Justin Levine trailer](project-justin-levine-trailer.md) — Verticals/Shepherd 16:9 storyboard: Jennifer look + Twiml/Dime motion, ~/jl-trailer/storyboard, sources, status
+- [Plain cuts: fast + A/V checked](feedback-plain-cuts-fast-and-synced.md) — script cuts must be quick; verify video len = audio len + frame counts before delivery; use loop filter not tpad
+- [Instagram audio → song ID](instagram-audio-id-route.md) — neo resource URLs + efg decode for audio track, PyAV to wav, shazamio
+- [Never close/stop unasked](feedback-keep-ref-tabs-open.md) — keep ref tabs, terminal sessions, running jobs open; "new terminal tab" = real Terminal.app claude session via osascript
+- [Footage at normal speed](feedback-footage-normal-speed.md) — no slow-mo/optical-flow stretching of footage; only camera moves get smoothed
+- [JL trailer scene review rules](feedback-jl-trailer-scene-review.md) — NO zoom-through transitions ever; copy ref transitions; big captions near subject; centred subject; no laggy captures (get originals); ref-speed 3D camera

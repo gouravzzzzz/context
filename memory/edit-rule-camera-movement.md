@@ -1,6 +1,6 @@
 ---
 name: edit-rule-camera-movement
-description: "Reels need constant purposeful camera movement — pushes/tilts/pans that focus on what is happening; a still-looking edit is a fail"
+description: "Camera movement must be calm and purposeful: v3 constant pushes/tilts were rejected; zooms only at transitions/entries, centred, using the user ease graph"
 metadata:
   type: feedback
 ---
@@ -18,3 +18,9 @@ Moves stay smooth (eased bezier curves, one clear direction at a time, no shake 
 - On graphics, move the camera to frame each new element as it appears.
 - On talking heads, combine strong head tracking ([[edit-rule-talking-head-framing]]) with pushes on key words.
 - Captions stay fixed and unzoomed, in [[edit-rule-reels-safe-zone]].
+
+**SUPERSEDED IN PART (2026-11-14 night, rounds 3 and 4 on CHASE_009):** the user said the v3 camera movement and zooms were "really bad and not at all what i showed you" and had them removed. What they want now:
+- On Chase: head tracking, plus a smooth zoom-out each time his clip comes in. Nothing else.
+- On photos: one zoom into his face as the photo appears, with the face centred. No bounce, slide or slam.
+- In 3D scenes: subtle, centred moves only, never drifting to one side, on [[ease-graph-user-smooth]].
+- No flash transitions.
